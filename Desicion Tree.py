@@ -79,8 +79,6 @@ def entropy(dataSet):
 
 def condEntropy(dataSet, attribute, threshold):
 	(leftSet, rightSet) = splitData(dataSet, attribute, threshold)
-	if (leftSet == []):
-		return 0
 	totalEntropy = len(leftSet)/len(dataSet)*entropy(leftSet)
 	totalEntropy += len(rightSet)/len(dataSet)*entropy(rightSet)
 	return totalEntropy
